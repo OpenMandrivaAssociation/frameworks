@@ -11,6 +11,7 @@ Source:		%{name}-%{version}.tar.bz2
 URL:		http://www.polycrystal.org/software/frameworks.html
 License:	GPL
 Group:		Video
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires:	pkgconfig gtk2-devel libglade2.0-devel
 
 %description
