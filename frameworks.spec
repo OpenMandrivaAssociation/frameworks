@@ -32,9 +32,15 @@ rm -rf $RPM_BUILD_ROOT
 %makeinstall
 
 #menu
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat << EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}): command="%{name}" icon="video_section.png" needs="x11" title="FrameWorks" longtitle="Stop-motion animation tool" section="Multimedia/Video"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
+[Desktop Entry]
+Type=Application
+Exec=%{name}
+Icon=video_section
+Name=FrameWorks
+Comment=Stop-motion animation tool
+Categories=AudioVideo;
 EOF
 
 %find_lang %name
@@ -52,6 +58,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %doc README
 %{_bindir}/%name
-%{_menudir}/%name
+%{_datadir}/applications/mandriva-%name.desktop
 %{_datadir}/*.glade
 
