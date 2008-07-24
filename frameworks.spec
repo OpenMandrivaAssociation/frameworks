@@ -1,6 +1,6 @@
 %define name	frameworks
 %define version	0.3.6
-%define release %mkrel 1
+%define release %mkrel 3
 
 Name: 	 	%{name}
 Summary: 	Stop-motion animation tool
