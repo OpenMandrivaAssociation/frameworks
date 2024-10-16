@@ -8,7 +8,7 @@ Version: 	%{version}
 Release: 	%{release}
 
 Source:		%{name}-%{version}.tar.bz2
-URL:		http://www.polycrystal.org/software/frameworks.html
+URL:		https://www.polycrystal.org/software/frameworks.html
 License:	GPL
 Group:		Video
 BuildRoot:	%{_tmppath}/%{name}-buildroot
